@@ -1,0 +1,51 @@
+=== UBER RIDE ANALYSIS COMPREHENSIVE RESULTS ===
+
+1. REGRESSION MODELS COMPARISON
+              Metric Simple_Regression Multiple_Regression
+1               RMSE            57.226              58.643
+2          R-squared             0.018               0.010
+3 Adjusted R-squared             0.173               0.177
+
+2. WEEKLY PATTERNS
+# A tibble: 8 × 4
+  dayofweek Total_Rides Avg_Rides_Per_Day Std_Dev
+  <ord>           <int>             <dbl>   <dbl>
+1 <NA>           637399         637399      NA   
+2 Tue             76866              4.99    5.40
+3 Fri             68834              4.68    5.91
+4 Thu             66175              4.55    5.60
+5 Sat             65711              4.51    6.43
+6 Wed             63382              4.12    5.71
+7 Mon             56587              4.06    5.64
+8 Sun             51964              3.57    6.79
+
+3. HOURLY PATTERNS
+# A tibble: 25 × 3
+   hour  Total_Rides Avg_Rides_Per_Hour
+   <fct>       <int>              <dbl>
+ 1 <NA>       637399          637399   
+ 2 17          32873               6.05
+ 3 18          31893               6.03
+ 4 16          30652               5.64
+ 5 19          29147               5.60
+ 6 20          27948               5.43
+ 7 21          27247               5.31
+ 8 15          26893               5.14
+ 9 14          23064               4.63
+10 22          22254               4.69
+# ℹ 15 more rows
+# ℹ Use `print(n = ...)` to see more rows
+
+4. STATISTICAL TEST RESULTS
+
+	Welch Two Sample t-test
+
+data:  ride_count by is_weekend
+t = 1.0336, df = 305.2, p-value = 0.3021
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+ -239.3349  768.9567
+sample estimates:
+mean in group 0 mean in group 1 
+      308.71569        43.90476 
+

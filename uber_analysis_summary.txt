@@ -1,0 +1,20 @@
+Uber Data Analysis Summary
+
+Total Trips: 1086918 
+Date Range: NA to NA 
+
+Location Statistics:
+  mean_lat  mean_lon     sd_lat     sd_lon  lat_q1  lat_q3   lon_q1   lon_q3
+1    40.74 -73.97379 0.04094645 0.05904586 40.7219 40.7617 -73.9967 -73.9665
+
+Monthly Summary:
+# A tibble: 7 × 6
+  month total_trips avg_trips_per_day busiest_hour lat_range lon_range
+  <ord>       <int>             <dbl> <chr>            <dbl>     <dbl>
+1 Apr         21564             1198  17               0.932      1.63
+2 May         53310             2806. 17               0.941      1.52
+3 Jun         58616             3256. 17               1.25       1.72
+4 Jul        106144             5587. 17               1.28       1.82
+5 Aug         49895             2626. 17               1.32       2.24
+6 Sep        159990             8888. 18               1.31       2.06
+7 <NA>       637399           637399  0                1.67       2.47
